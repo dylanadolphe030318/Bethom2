@@ -1,0 +1,151 @@
+:root {
+  --background: #eef6fc;
+  --surface: #ffffff;
+  --text: #172a46;
+  --text-secondary: #4d647c;
+  --accent: #2d6fc1;
+  --accent-soft: #7eb0e8;
+  --border: #d6e5f3;
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: linear-gradient(135deg, var(--accent), #1c4f8c);
+  color: #ffffff;
+  padding: 5rem 0 4rem;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.intro {
+  max-width: 720px;
+  margin: 1.25rem auto 1.75rem;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.button {
+  display: inline-block;
+  background: #ffffff;
+  color: var(--accent);
+  padding: 0.95rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(45, 111, 193, 0.16);
+}
+
+.button.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-light {
+  background: var(--surface);
+}
+
+.section-secondary {
+  background: #e3effb;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.section p {
+  max-width: 720px;
+  color: var(--text-secondary);
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 14px 35px rgba(32, 60, 96, 0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.contact-block {
+  text-align: center;
+}
+
+.contact-block p {
+  margin: 1rem auto 2rem;
+}
+
+.site-footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .intro {
+    margin: 1rem auto 1.5rem;
+  }
+}
